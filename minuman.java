@@ -4,7 +4,6 @@ public class minuman extends menu{
     
     public void setUkuran(String ukuran){
         this.ukuran = ukuran;
-        System.out.println(this.ukuran);
     }
     
     public String getUkuran (){
