@@ -50,8 +50,29 @@ public class main {
                food.tampil_pesanan();
                
                total = food.getHarga();
-           }else{
-              System.out.println("coming soon");
+           }else if (type == 2){
+               System.out.print("Nama = ");
+               nama = br.readLine();
+               drink.setNama(nama);
+
+               drink.tampilUkuran();
+               System.out.print("Ukuran = ");
+               ukuran = br.readLine();
+               drink.setUkuran(ukuran);
+
+               System.out.print("Jumlah = ");
+               qty = input.nextInt();
+               drink.setJumlah(qty);
+               
+               System.out.print("Harga = ");
+               harga = input.nextDouble();
+               drink.setHarga(harga);
+
+               System.out.println(" ");
+               System.out.println("=== validasi pesanan ===");
+               drink.tampil_pesanan();
+               
+               total = drink.getHarga();
            }
            
            totalbayar = totalbayar + total;
