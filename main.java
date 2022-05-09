@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class main {
    public static void main(String[] args) throws IOException {
        //INISIASI
-       String nama, topping;
-       int qty;
+       String nama;
+       int qty, topping, ukuran;
        double harga, total = 0, totalbayar = 0;;
        int type,next;
        double temp;
@@ -28,22 +28,18 @@ public class main {
            type = input.nextInt();
 
            if(type == 1){
-               System.out.print("Nama = ");
-               nama = br.readLine();
-               food.setNama(nama);
+               food.setNama();
 
                food.tampilTopping();
-               System.out.print("Topping = ");
-               topping = br.readLine();
-               food.setTopping(topping);
+               System.out.print("Masukkan Pilihan : ");
+               topping = input.nextInt();
+               food.setTopping(topping - 1);
 
                System.out.print("Jumlah = ");
                qty = input.nextInt();
                food.setJumlah(qty);
                
-               System.out.print("Harga = ");
-               harga = input.nextDouble();
-               food.setHarga(harga);
+               food.setHarga();
 
                System.out.println(" ");
                System.out.println("=== validasi pesanan ===");
@@ -51,22 +47,19 @@ public class main {
                
                total = food.getHarga();
            }else if (type == 2){
-               System.out.print("Nama = ");
-               nama = br.readLine();
-               drink.setNama(nama);
+               
+               drink.setNama();
 
                drink.tampilUkuran();
-               System.out.print("Ukuran = ");
-               ukuran = br.readLine();
-               drink.setUkuran(ukuran);
+               System.out.print("Masukkan Pilihan = ");
+               ukuran = input.nextInt();
+               drink.setUkuran(ukuran - 1);
 
                System.out.print("Jumlah = ");
                qty = input.nextInt();
                drink.setJumlah(qty);
                
-               System.out.print("Harga = ");
-               harga = input.nextDouble();
-               drink.setHarga(harga);
+               drink.setHarga();
 
                System.out.println(" ");
                System.out.println("=== validasi pesanan ===");
