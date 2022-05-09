@@ -1,4 +1,6 @@
+import java.util.Scanner;
 public class menu {
+    public Scanner input = new Scanner(System.in);
     public String nama;
     public double harga;
     public int jumlah;
@@ -9,16 +11,16 @@ public class menu {
         this.jumlah=0;
     }
     
-    protected void setNama(String nama){
-        this.nama = nama;
+    protected void setNama(){
+        this.nama = "";
     }
     
     protected String getNama(){
         return this.nama;
     }
     
-    protected void setHarga(double harga){
-        this.harga = harga;
+    protected void setHarga(){
+        this.harga = 0;
     }
     
     protected double getHarga(){
