@@ -2,7 +2,11 @@ public class minuman extends menu implements pesanan {
     private String ukuran;
     private String[]daftar_ukuran = {"Small", "Medium", "Large"};
     private String[] daftar_minuman = {"Capuccino", "Kopi Susu", "Espresso", "Latte", "Milkshake Vanilla", "Milkshake Coklat"};
-    private String[]daftar_ukuran = {"Small", "Medium", "Large"};
+    private double[] daftar_harga = {18000, 12500, 10000, 17000, 24000, 24000};
+    
+    public void setUkuran(int pil){
+        this.ukuran = this.daftar_ukuran[pil];
+    }
     
     @Override
     protected void setNama(){
@@ -17,10 +21,6 @@ public class minuman extends menu implements pesanan {
         this.nama = daftar_minuman[pil-1];
     }
     
-    public void setUkuran(String ukuran){
-        this.ukuran = ukuran;
-    }
-    
     public String getUkuran (){
         return this.ukuran;
     }
@@ -31,7 +31,6 @@ public class minuman extends menu implements pesanan {
             System.out.println((i+1) + ". " + daftar_ukuran[i] );
         }
     }
-    
     @Override
     public void tampil_pesanan(){
        System.out.println("Nama = " + getNama());
