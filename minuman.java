@@ -1,4 +1,4 @@
-public class minuman extends menu{
+public class minuman extends menu implements pesanan {
     private String ukuran;
     private String[]daftar_ukuran = {"Small", "Medium", "Large"};
     private String[] daftar_minuman = {"Capuccino", "Kopi Susu", "Espresso", "Latte", "Milkshake Vanilla", "Milkshake Coklat"};
@@ -31,6 +31,8 @@ public class minuman extends menu{
             System.out.println((i+1) + ". " + daftar_ukuran[i] );
         }
     }
+    
+    @Override
     public void tampil_pesanan(){
        System.out.println("Nama = " + getNama());
        System.out.println("Size = " + getUkuran());
