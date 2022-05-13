@@ -5,7 +5,7 @@ public class makanan extends menu implements pesanan {
     private String[]daftar_topping = {"sosis", "telur", "keju"};
     private int []harga_topping = {3000, 1500, 3000};
     
-     @Override
+    @Override
     protected void setNama(){
         int pil;
         System.out.println("=== Daftar Menu ===");
@@ -18,8 +18,8 @@ public class makanan extends menu implements pesanan {
         this.nama = daftar_makanan[pil-1];
     }
     
-    public void setTopping(String topping){
-        this.topping = topping;
+    public void setTopping(int pil){
+        this.topping = this.daftar_topping[pil];
     }
     
     public String getTopping (){
@@ -62,4 +62,5 @@ public class makanan extends menu implements pesanan {
        System.out.println("Quantity = " + getJumlah());
        System.out.println("Price = " + getHarga());
     }
+    
 }
