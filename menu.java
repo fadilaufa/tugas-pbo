@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class menu {
     public Scanner input = new Scanner(System.in);
     public String nama;
+    protected int id;
     public double harga;
     public int jumlah;
     
