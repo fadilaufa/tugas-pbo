@@ -14,7 +14,7 @@ public class main {
        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
        Scanner input = new Scanner(System.in);
        makanan food = new makanan();
-
+       minuman drink = new minuman();
 
        System.out.println("== Menu Pembayaran Cafe ==");
        System.out.println("Masukan Detail Pemesanan :");
@@ -38,6 +38,7 @@ public class main {
                System.out.print("Jumlah = ");
                qty = input.nextInt();
                food.setJumlah(qty);
+               
                
                food.setHarga();
 
