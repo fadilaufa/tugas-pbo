@@ -1,4 +1,4 @@
-public class makanan extends menu{
+public class makanan extends menu implements pesanan {
     private String topping;
     private String[] daftar_makanan = {"Roti Bakar", "Mie Goreng", "Mie Rebus", "Pisang Crispy", "French Fries", "Sosis"};
     private double[] daftar_harga = {10000, 12000, 12000, 15000, 15000, 15000};
@@ -55,6 +55,7 @@ public class makanan extends menu{
        super.harga = harga_akhir;
     }
     
+    @Override
     public void tampil_pesanan(){
        System.out.println("Nama = " + getNama());
        System.out.println("Topping = " + getTopping() + " | Rp. " + getHargatopping());
